@@ -1,13 +1,13 @@
+import { DEFAULT_CATEGORY_IMG_URL } from "../../../constants/urls";
 import Link from "next/link";
 import Image from "../../../image";
-import { DEFAULT_CATEGORY_IMG_URL } from "../../../constants/urls";
 
 const ParentCategoryBlock = (props) => {
   const { category } = props;
 
   return (
     <div className='product mb-5'>
-      <Link href={`/categories/${category?.slug}`}>
+      <Link href={`/category/${category?.slug}`}>
         <a>
           <Image
             className='object-cover h-40 md:h-64'

@@ -3,6 +3,12 @@ const allowedImageWordPressDomain = new URL(
   process.env.NEXT_PUBLIC_WORDPRESS_URL
 ).hostname;
 
+const withImages = require("next-images");
+module.exports = withImages({
+  webpack(config, options) {
+    return config;
+  },
+});
 module.exports = {
   trailingSlash: true,
   webpackDevMiddleware: (config) => {

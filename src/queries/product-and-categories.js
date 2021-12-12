@@ -24,19 +24,20 @@ const PRODUCTS_AND_CATEGORIES_QUERY = gql`
         }
       }
     }
-    productCategories(first: 5) {
+    productCategories(where: { parent: 0, exclude: [15, 33] }) {
       nodes {
-        id
+        productCategoryId
         name
         slug
         image {
           id
           sourceUrl
           srcSet
+          parentId
         }
       }
     }
-    products(first: 50) {
+    products(where: { orderby: { field: MODIFIED } }, first: 8) {
       nodes {
         id
         productId: databaseId

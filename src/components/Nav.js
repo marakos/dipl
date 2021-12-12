@@ -6,20 +6,20 @@ const Nav = () => {
   const [isMenuVisible, setMenuVisibility] = useState(false);
 
   return (
-    <nav className='bg-green-500 p-4'>
+    <nav className='bg-red-100 p-4'>
       <div className='flex items-center justify-between flex-wrap container mx-auto'>
         <div className='flex items-center flex-shrink-0 text-black mr-20'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            class='h-6 w-6'
+            className='h-6 w-6'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
           >
             <path
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth='2'
               d='M5 13l4 4L19 7'
             />
           </svg>
@@ -82,50 +82,6 @@ const Nav = () => {
           </div>
 
           <div className='text-sm font-medium'>
-            <a
-              href='#responsive-header'
-              className='block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='hidden lg:block m-auto'
-                fill='none'
-                viewBox='0 0 24 24'
-                width='18'
-                height='auto'
-                stroke='currentColor'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z'
-                />
-              </svg>
-              Profile
-            </a>
-            <a
-              href='#responsive-header'
-              className='block mt-4 lg:inline-block lg:mt-0 text-black hover:text-black mr-10'
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='hidden lg:block m-auto'
-                fill='none'
-                viewBox='0 0 24 24'
-                width='18'
-                height='auto'
-                stroke='currentColor'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01'
-                />
-              </svg>
-              Wishlist
-            </a>
             <CartIcon />
           </div>
         </div>

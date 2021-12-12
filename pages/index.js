@@ -4,20 +4,24 @@ import client from "../src/components/ApolloClient";
 import ParentCategoriesBlock from "../src/components/category/category-block/ParentCategoriesBlock";
 import PRODUCTS_AND_CATEGORIES_QUERY from "../src/queries/product-and-categories";
 import HeroCarousel from "../src/components/home/hero-carousel";
+import ContactForm from "../src/components/form/ContactForm";
 
 export default function Home(props) {
   const { products, productCategories, heroCarousel } = props || {};
-
+  const handleContactSubmit = (data) => {
+    fetch("/api/contact", {
+      method: "post",
+      body: JSON.stringify(data),
+    });
+  };
   return (
     <Layout>
       {/*Hero Carousel*/}
       <HeroCarousel heroCarousel={heroCarousel} />
       {/*Categories*/}
-      <div className='product-categories-container container mx-auto my-32 px-4 xl:px-0'>
-        <h2 className='main-title text-xl mb-5 uppercase'>
-          <span className='main-title-inner'>Categories</span>
-        </h2>
-        <ParentCategoriesBlock productCategories={productCategories} />
+      <div className='product-categories-container container mx-auto my-32 px-4 xl:px-0 mt-40'>
+        {/* TODO ADD ABOUT US  */}
+        <ContactForm handleFormSubmit={handleContactSubmit} title={"Contact"} />
       </div>
       {/*Products*/}
       <div className='products container mx-auto my-32 px-4 xl:px-0'>

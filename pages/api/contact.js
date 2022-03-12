@@ -13,8 +13,8 @@ export default async (req, res) => {
   `;
 
   const data = {
-    to: "bamias7@gmail.com",
-    from: "bamias7@gmail.com",
+    to: `${body.email}`,
+    from: `bamias7@gmail.com`,
     subject: `New message from ${body.name}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),

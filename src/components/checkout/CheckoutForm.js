@@ -233,6 +233,7 @@ const CheckoutForm = ({ countriesData }) => {
 
   useEffect(async () => {
     if (null !== orderData) {
+      console.log(orderData);
       // Call the checkout mutation when the value for orderData changes/updates.
       await checkout();
     }

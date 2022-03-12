@@ -21,7 +21,10 @@ export default function Home(props) {
       {/*Categories*/}
       <div className='product-categories-container container mx-auto my-32 px-4 xl:px-0 mt-40'>
         {/* TODO ADD ABOUT US  */}
-        <ContactForm handleFormSubmit={handleContactSubmit} title={"Contact"} />
+        <ContactForm
+          handleFormSubmit={handleContactSubmit}
+          title={"Φόρμα Επικοινωνίας"}
+        />
       </div>
       {/*Products*/}
       <div className='products container mx-auto my-32 px-4 xl:px-0'>
